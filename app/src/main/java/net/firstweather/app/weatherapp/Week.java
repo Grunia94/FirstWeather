@@ -11,8 +11,8 @@ import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
-import android.preference.PreferenceManager;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -31,11 +31,11 @@ import net.firstweather.app.weatherapp.data.Units;
 import net.firstweather.app.weatherapp.fragments.WeatherConditionFragment;
 import net.firstweather.app.weatherapp.listener.GeocodingServiceListener;
 import net.firstweather.app.weatherapp.listener.WeatherServiceListener;
-import net.firstweather.app.weatherapp.service.WeatherCacheService;
 import net.firstweather.app.weatherapp.service.GoogleMapsGeocodingService;
+import net.firstweather.app.weatherapp.service.WeatherCacheService;
 import net.firstweather.app.weatherapp.service.YahooWeatherService;
 
-public class HomeActivity extends AppCompatActivity implements WeatherServiceListener, GeocodingServiceListener, LocationListener {
+public class Week extends AppCompatActivity implements WeatherServiceListener, GeocodingServiceListener, LocationListener {
 
     public static int GET_WEATHER_FROM_CURRENT_LOCATION = 0x00001;
 
@@ -58,12 +58,12 @@ public class HomeActivity extends AppCompatActivity implements WeatherServiceLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.homescreen);
+        setContentView(R.layout.week);
 
-        weatherIconImageView = (ImageView) findViewById(R.id.weatherIconImageView);
-        temperatureTextView = (TextView) findViewById(R.id.temperatureTextView);
-        conditionTextView = (TextView) findViewById(R.id.conditionTextView);
-        locationTextView = (TextView) findViewById(R.id.locationTextView);
+        //weatherIconImageView = (ImageView) findViewById(R.id.weatherIconImageView);
+        //temperatureTextView = (TextView) findViewById(R.id.temperatureTextView);
+        //conditionTextView = (TextView) findViewById(R.id.conditionTextView);
+        //locationTextView = (TextView) findViewById(R.id.locationTextView);
 
         preferences = PreferenceManager.getDefaultSharedPreferences(this);
 
@@ -132,7 +132,7 @@ public class HomeActivity extends AppCompatActivity implements WeatherServiceLis
     }
 
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-        if (requestCode == HomeActivity.GET_WEATHER_FROM_CURRENT_LOCATION) {
+        if (requestCode == Week.GET_WEATHER_FROM_CURRENT_LOCATION) {
             if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 getWeatherFromCurrentLocation();
             } else {
@@ -190,10 +190,10 @@ public class HomeActivity extends AppCompatActivity implements WeatherServiceLis
 
         int weatherIconImageResource = getResources().getIdentifier("icon_" + condition.getCode(), "drawable", getPackageName());
 
-        weatherIconImageView.setImageResource(weatherIconImageResource);
-        temperatureTextView.setText(getString(R.string.temperature_output, condition.getTemperature(), units.getTemperature()));
-        conditionTextView.setText(condition.getDescription());
-        locationTextView.setText(channel.getLocation());
+        //weatherIconImageView.setImageResource(weatherIconImageResource);
+        //temperatureTextView.setText(getString(R.string.temperature_output, condition.getTemperature(), units.getTemperature()));
+        //conditionTextView.setText(condition.getDescription());
+        //locationTextView.setText(channel.getLocation());
 
         for (int day = 0; day < forecast.length; day++) {
             if (day >= 5) {
@@ -270,13 +270,13 @@ public class HomeActivity extends AppCompatActivity implements WeatherServiceLis
 
         switch (view.getId()) {
 
-            case R.id.tomorrow:
-                intent = new Intent(HomeActivity.this, TomorrowActivity.class);
+            case R.id.home:
+                intent = new Intent(Week.this, TomorrowActivity.class);
                 startActivity(intent);
                 break;
 
             case R.id.week:
-                intent = new Intent(HomeActivity.this, Week.class);
+                intent = new Intent(Week.this, Week.class);
                 startActivity(intent);
                 break;
 
