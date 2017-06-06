@@ -34,6 +34,7 @@ public class Condition implements JSONPopulator {
     private int lowTemperature;
     private String description;
     private String day;
+    private String date;
 
     public int getCode() {
         return code;
@@ -59,6 +60,10 @@ public class Condition implements JSONPopulator {
         return day;
     }
 
+    public String getDate() {
+        return date;
+    }
+
     @Override
     public void populate(JSONObject data) {
         code = data.optInt("code");
@@ -67,6 +72,7 @@ public class Condition implements JSONPopulator {
         lowTemperature = data.optInt("low");
         description = data.optString("text");
         day = data.optString("day");
+        date = data.optString("date");
     }
 
     @Override
@@ -80,6 +86,7 @@ public class Condition implements JSONPopulator {
             data.put("low", lowTemperature);
             data.put("text", description);
             data.put("day", day);
+            data.put("date", date);
         } catch (JSONException e) {
             e.printStackTrace();
         }

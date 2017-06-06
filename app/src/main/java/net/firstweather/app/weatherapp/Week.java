@@ -60,10 +60,7 @@ public class Week extends AppCompatActivity implements WeatherServiceListener, G
         super.onCreate(savedInstanceState);
         setContentView(R.layout.week);
 
-        //weatherIconImageView = (ImageView) findViewById(R.id.weatherIconImageView);
-        //temperatureTextView = (TextView) findViewById(R.id.temperatureTextView);
-        //conditionTextView = (TextView) findViewById(R.id.conditionTextView);
-        //locationTextView = (TextView) findViewById(R.id.locationTextView);
+        locationTextView = (TextView) findViewById(R.id.locationTextView);
 
         preferences = PreferenceManager.getDefaultSharedPreferences(this);
 
@@ -190,10 +187,7 @@ public class Week extends AppCompatActivity implements WeatherServiceListener, G
 
         int weatherIconImageResource = getResources().getIdentifier("icon_" + condition.getCode(), "drawable", getPackageName());
 
-        //weatherIconImageView.setImageResource(weatherIconImageResource);
-        //temperatureTextView.setText(getString(R.string.temperature_output, condition.getTemperature(), units.getTemperature()));
-        //conditionTextView.setText(condition.getDescription());
-        //locationTextView.setText(channel.getLocation());
+        locationTextView.setText(channel.getLocation());
 
         for (int day = 0; day < forecast.length; day++) {
             if (day >= 5) {

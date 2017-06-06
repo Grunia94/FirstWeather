@@ -46,6 +46,7 @@ public class HomeActivity extends AppCompatActivity implements WeatherServiceLis
     private TextView temperatureTextView;
     private TextView conditionTextView;
     private TextView locationTextView;
+    private TextView dataTextView;
 
     private YahooWeatherService weatherService;
     private GoogleMapsGeocodingService geocodingService;
@@ -67,6 +68,7 @@ public class HomeActivity extends AppCompatActivity implements WeatherServiceLis
         temperatureTextView = (TextView) findViewById(R.id.temperatureTextView);
         conditionTextView = (TextView) findViewById(R.id.conditionTextView);
         locationTextView = (TextView) findViewById(R.id.locationTextView);
+        dataTextView = (TextView) findViewById(R.id.data);
 
         preferences = PreferenceManager.getDefaultSharedPreferences(this);
 
@@ -196,6 +198,7 @@ public class HomeActivity extends AppCompatActivity implements WeatherServiceLis
         temperatureTextView.setText(getString(R.string.temperature_output, condition.getTemperature(), units.getTemperature()));
         conditionTextView.setText(condition.getDescription());
         locationTextView.setText(channel.getLocation());
+        dataTextView.setText(condition.getDate());
 
         cacheService.save(channel);
     }

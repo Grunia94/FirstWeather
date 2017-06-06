@@ -43,6 +43,7 @@ public class TomorrowActivity extends AppCompatActivity implements WeatherServic
     private TextView temperatureTextView;
     private TextView conditionTextView;
     private TextView locationTextView;
+    private TextView dataTextView;
 
     private YahooWeatherService weatherService;
     private GoogleMapsGeocodingService geocodingService;
@@ -64,6 +65,7 @@ public class TomorrowActivity extends AppCompatActivity implements WeatherServic
         temperatureTextView = (TextView) findViewById(R.id.temperatureTextView);
         conditionTextView = (TextView) findViewById(R.id.conditionTextView);
         locationTextView = (TextView) findViewById(R.id.locationTextView);
+        dataTextView = (TextView) findViewById(R.id.data);
 
         preferences = PreferenceManager.getDefaultSharedPreferences(this);
 
@@ -194,16 +196,7 @@ public class TomorrowActivity extends AppCompatActivity implements WeatherServic
         temperatureTextView.setText(getString(R.string.temperature_output, condition.getHighTemperature(), units.getTemperature()));
         conditionTextView.setText(condition.getDescription());
         locationTextView.setText(channel.getLocation());
-
-
-            int day = 1;
-            Condition currentCondition = forecast[day];
-            int viewId = getResources().getIdentifier("forecast_", "id", getPackageName());
-            WeatherConditionFragment fragment = (WeatherConditionFragment) getSupportFragmentManager().findFragmentById(viewId);
-
-            if (fragment != null) {
-                fragment.loadForecast(currentCondition, channel.getUnits());
-        }
+        dataTextView.setText(condition.getDate());
 
         cacheService.save(channel);
     }
