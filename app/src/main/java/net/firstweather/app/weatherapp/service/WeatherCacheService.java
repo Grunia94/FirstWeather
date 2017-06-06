@@ -22,14 +22,14 @@
  * THE SOFTWARE.
  *
  */
-package net.digitalphantom.app.weatherapp.service;
+package net.firstweather.app.weatherapp.service;
 
 import android.content.Context;
 import android.os.AsyncTask;
 
-import net.digitalphantom.app.weatherapp.R;
-import net.digitalphantom.app.weatherapp.data.Channel;
-import net.digitalphantom.app.weatherapp.listener.WeatherServiceListener;
+import net.firstweather.app.weatherapp.R;
+import net.firstweather.app.weatherapp.data.Channel;
+import net.firstweather.app.weatherapp.listener.WeatherServiceListener;
 
 import org.json.JSONObject;
 
