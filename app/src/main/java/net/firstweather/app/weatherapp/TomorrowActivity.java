@@ -270,12 +270,12 @@ public class TomorrowActivity extends AppCompatActivity implements WeatherServic
 
         switch (view.getId()) {
 
-            case R.id.tomorrow:
-                intent = new Intent(TomorrowActivity.this, TomorrowActivity.class);
+            case R.id.today:
+                intent = new Intent(TomorrowActivity.this, HomeActivity.class);
                 startActivity(intent);
                 break;
 
-            case R.id.home:
+            case R.id.week:
                 intent = new Intent(TomorrowActivity.this, Week.class);
                 startActivity(intent);
                 break;

@@ -270,13 +270,13 @@ public class Week extends AppCompatActivity implements WeatherServiceListener, G
 
         switch (view.getId()) {
 
-            case R.id.home:
-                intent = new Intent(Week.this, TomorrowActivity.class);
+            case R.id.today:
+                intent = new Intent(Week.this, HomeActivity.class);
                 startActivity(intent);
                 break;
 
-            case R.id.week:
-                intent = new Intent(Week.this, Week.class);
+            case R.id.tomorrow:
+                intent = new Intent(Week.this, TomorrowActivity.class);
                 startActivity(intent);
                 break;
 
