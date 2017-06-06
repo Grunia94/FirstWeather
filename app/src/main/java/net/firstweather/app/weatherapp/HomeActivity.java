@@ -7,6 +7,9 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.icu.text.DateFormat;
+import android.icu.text.SimpleDateFormat;
+import android.icu.util.Calendar;
 import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
@@ -186,7 +189,6 @@ public class HomeActivity extends AppCompatActivity implements WeatherServiceLis
 
         Condition condition = channel.getItem().getCondition();
         Units units = channel.getUnits();
-        Condition[] forecast = channel.getItem().getForecast();
 
         int weatherIconImageResource = getResources().getIdentifier("icon_" + condition.getCode(), "drawable", getPackageName());
 
@@ -194,21 +196,6 @@ public class HomeActivity extends AppCompatActivity implements WeatherServiceLis
         temperatureTextView.setText(getString(R.string.temperature_output, condition.getTemperature(), units.getTemperature()));
         conditionTextView.setText(condition.getDescription());
         locationTextView.setText(channel.getLocation());
-
-        for (int day = 0; day < forecast.length; day++) {
-            if (day >= 5) {
-                break;
-            }
-
-            Condition currentCondition = forecast[day];
-
-            int viewId = getResources().getIdentifier("forecast_" + day, "id", getPackageName());
-            WeatherConditionFragment fragment = (WeatherConditionFragment) getSupportFragmentManager().findFragmentById(viewId);
-
-            if (fragment != null) {
-                fragment.loadForecast(currentCondition, channel.getUnits());
-            }
-        }
 
         cacheService.save(channel);
     }

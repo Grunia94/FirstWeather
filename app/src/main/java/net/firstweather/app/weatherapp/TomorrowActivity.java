@@ -184,30 +184,25 @@ public class TomorrowActivity extends AppCompatActivity implements WeatherServic
     public void serviceSuccess(Channel channel) {
         loadingDialog.hide();
 
-        Condition condition = channel.getItem().getCondition();
         Units units = channel.getUnits();
         Condition[] forecast = channel.getItem().getForecast();
+        Condition condition = forecast[1]; //jutro
 
         int weatherIconImageResource = getResources().getIdentifier("icon_" + condition.getCode(), "drawable", getPackageName());
 
         weatherIconImageView.setImageResource(weatherIconImageResource);
-        temperatureTextView.setText(getString(R.string.temperature_output, condition.getTemperature(), units.getTemperature()));
+        temperatureTextView.setText(getString(R.string.temperature_output, condition.getHighTemperature(), units.getTemperature()));
         conditionTextView.setText(condition.getDescription());
         locationTextView.setText(channel.getLocation());
 
-        for (int day = 0; day < forecast.length; day++) {
-            if (day >= 5) {
-                break;
-            }
 
+            int day = 1;
             Condition currentCondition = forecast[day];
-
-            int viewId = getResources().getIdentifier("forecast_" + day, "id", getPackageName());
+            int viewId = getResources().getIdentifier("forecast_", "id", getPackageName());
             WeatherConditionFragment fragment = (WeatherConditionFragment) getSupportFragmentManager().findFragmentById(viewId);
 
             if (fragment != null) {
                 fragment.loadForecast(currentCondition, channel.getUnits());
-            }
         }
 
         cacheService.save(channel);
