@@ -3,13 +3,14 @@
     package="net.firstweather.app.weatherapp">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET"  />
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/logo"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:fullBackupContent="">
         <activity
             android:name="net.firstweather.app.weatherapp.HomeActivity"
             android:label="@string/app_name">
@@ -33,7 +34,7 @@
             android:parentActivityName=".HomeActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.firstweather.firstweather.HomeActivity" />
+                android:value="net.firstweather.app.weatherapp.HomeActivity" />
         </activity>
 
         <activity android:name=".Week"
@@ -41,7 +42,7 @@
             android:parentActivityName=".HomeActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.firstweather.firstweather.HomeActivity" />
+                android:value="net.firstweather.app.weatherapp.HomeActivity" />
         </activity>
 
 
