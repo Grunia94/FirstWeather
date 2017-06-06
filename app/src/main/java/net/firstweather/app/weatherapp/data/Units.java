@@ -22,12 +22,33 @@
  * THE SOFTWARE.
  *
  */
-package net.digitalphantom.app.weatherapp.data;
+package net.firstweather.app.weatherapp.data;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
-public interface JSONPopulator {
-    void populate(JSONObject data);
+public class Units implements JSONPopulator {
+    private String temperature;
 
-    JSONObject toJSON();
+    public String getTemperature() {
+        return temperature;
+    }
+
+    @Override
+    public void populate(JSONObject data) {
+        temperature = data.optString("temperature");
+    }
+
+    @Override
+    public JSONObject toJSON() {
+        JSONObject data = new JSONObject();
+
+        try {
+            data.put("temperature", temperature);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        return data;
+    }
 }

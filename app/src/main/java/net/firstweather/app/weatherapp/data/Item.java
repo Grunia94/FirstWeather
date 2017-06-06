@@ -22,7 +22,7 @@
  * THE SOFTWARE.
  *
  */
-package net.digitalphantom.app.weatherapp.data;
+package net.firstweather.app.weatherapp.data;
 
 import org.json.JSONArray;
 import org.json.JSONException;

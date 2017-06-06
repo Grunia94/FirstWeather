@@ -22,12 +22,12 @@
  * THE SOFTWARE.
  *
  */
-package net.digitalphantom.app.weatherapp.listener;
+package net.firstweather.app.weatherapp.data;
 
-import net.digitalphantom.app.weatherapp.data.LocationResult;
+import org.json.JSONObject;
 
-public interface GeocodingServiceListener {
-    void geocodeSuccess(LocationResult location);
+public interface JSONPopulator {
+    void populate(JSONObject data);
 
-    void geocodeFailure(Exception exception);
+    JSONObject toJSON();
 }

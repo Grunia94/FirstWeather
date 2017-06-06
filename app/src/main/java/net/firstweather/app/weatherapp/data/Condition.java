@@ -22,59 +22,68 @@
  * THE SOFTWARE.
  *
  */
-package net.digitalphantom.app.weatherapp.data;
+package net.firstweather.app.weatherapp.data;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class Channel implements JSONPopulator {
-    private Units units;
-    private Item item;
-    private String location;
+public class Condition implements JSONPopulator {
+    private int code;
+    private int temperature;
+    private int highTemperature;
+    private int lowTemperature;
+    private String description;
+    private String day;
 
-    public Units getUnits() {
-        return units;
+    public int getCode() {
+        return code;
     }
 
-    public Item getItem() {
-        return item;
+    public int getTemperature() {
+        return temperature;
     }
 
-    public String getLocation() {
-        return location;
+    public int getHighTemperature() {
+        return highTemperature;
+    }
+
+    public int getLowTemperature() {
+        return lowTemperature;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public String getDay() {
+        return day;
     }
 
     @Override
     public void populate(JSONObject data) {
-
-        units = new Units();
-        units.populate(data.optJSONObject("units"));
-
-        item = new Item();
-        item.populate(data.optJSONObject("item"));
-
-        JSONObject locationData = data.optJSONObject("location");
-
-        String region = locationData.optString("region");
-        String country = locationData.optString("country");
-
-        location = String.format("%s, %s", locationData.optString("city"), (region.length() != 0 ? region : country));
+        code = data.optInt("code");
+        temperature = data.optInt("temp");
+        highTemperature = data.optInt("high");
+        lowTemperature = data.optInt("low");
+        description = data.optString("text");
+        day = data.optString("day");
     }
 
     @Override
     public JSONObject toJSON() {
-
         JSONObject data = new JSONObject();
 
         try {
-            data.put("units", units.toJSON());
-            data.put("item", item.toJSON());
-            data.put("requestLocation", location);
+            data.put("code", code);
+            data.put("temp", temperature);
+            data.put("high", highTemperature);
+            data.put("low", lowTemperature);
+            data.put("text", description);
+            data.put("day", day);
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
         return data;
     }
-
 }

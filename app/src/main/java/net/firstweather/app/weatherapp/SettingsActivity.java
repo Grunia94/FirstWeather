@@ -22,7 +22,7 @@
  * THE SOFTWARE.
  *
  */
-package net.digitalphantom.app.weatherapp;
+package net.firstweather.app.weatherapp;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -36,7 +36,7 @@ import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import net.digitalphantom.app.weatherapp.fragments.SettingsFragment;
+import net.firstweather.app.weatherapp.fragments.SettingsFragment;
 
 public class SettingsActivity extends PreferenceActivity {
     private AppCompatDelegate delegate;

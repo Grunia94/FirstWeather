@@ -22,12 +22,12 @@
  * THE SOFTWARE.
  *
  */
-package net.digitalphantom.app.weatherapp.listener;
+package net.firstweather.app.weatherapp.listener;
 
-import net.digitalphantom.app.weatherapp.data.Channel;
+import net.firstweather.app.weatherapp.data.LocationResult;
 
-public interface WeatherServiceListener {
-    void serviceSuccess(Channel channel);
+public interface GeocodingServiceListener {
+    void geocodeSuccess(LocationResult location);
 
-    void serviceFailure(Exception exception);
+    void geocodeFailure(Exception exception);
 }

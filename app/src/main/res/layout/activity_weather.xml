@@ -89,35 +89,35 @@ THE SOFTWARE.
         <fragment
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:name="net.digitalphantom.app.weatherapp.fragments.WeatherConditionFragment"
+            android:name="net.firstweather.app.weatherapp.fragments.WeatherConditionFragment"
             android:id="@+id/forecast_0"
             android:layout_weight="1"
             tools:layout="@layout/fragment_weather_condition" />
         <fragment
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:name="net.digitalphantom.app.weatherapp.fragments.WeatherConditionFragment"
+            android:name="net.firstweather.app.weatherapp.fragments.WeatherConditionFragment"
             android:id="@+id/forecast_1"
             android:layout_weight="1"
             tools:layout="@layout/fragment_weather_condition" />
         <fragment
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:name="net.digitalphantom.app.weatherapp.fragments.WeatherConditionFragment"
+            android:name="net.firstweather.app.weatherapp.fragments.WeatherConditionFragment"
             android:id="@+id/forecast_2"
             android:layout_weight="1"
             tools:layout="@layout/fragment_weather_condition" />
         <fragment
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:name="net.digitalphantom.app.weatherapp.fragments.WeatherConditionFragment"
+            android:name="net.firstweather.app.weatherapp.fragments.WeatherConditionFragment"
             android:id="@+id/forecast_3"
             android:layout_weight="1"
             tools:layout="@layout/fragment_weather_condition" />
         <fragment
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:name="net.digitalphantom.app.weatherapp.fragments.WeatherConditionFragment"
+            android:name="net.firstweather.app.weatherapp.fragments.WeatherConditionFragment"
             android:id="@+id/forecast_4"
             android:layout_weight="1"
             tools:layout="@layout/fragment_weather_condition" />

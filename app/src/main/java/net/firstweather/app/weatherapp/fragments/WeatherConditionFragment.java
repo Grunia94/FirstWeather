@@ -22,7 +22,7 @@
  * THE SOFTWARE.
  *
  */
-package net.digitalphantom.app.weatherapp.fragments;
+package net.firstweather.app.weatherapp.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -32,9 +32,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import net.digitalphantom.app.weatherapp.R;
-import net.digitalphantom.app.weatherapp.data.Condition;
-import net.digitalphantom.app.weatherapp.data.Units;
+import net.firstweather.app.weatherapp.R;
+import net.firstweather.app.weatherapp.data.Condition;
+import net.firstweather.app.weatherapp.data.Units;
 
 public class WeatherConditionFragment extends Fragment {
     private ImageView weatherIconImageView;

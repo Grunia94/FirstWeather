@@ -22,7 +22,7 @@
  * THE SOFTWARE.
  *
  */
-package net.digitalphantom.app.weatherapp.fragments;
+package net.firstweather.app.weatherapp.fragments;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -35,8 +35,8 @@ import android.preference.PreferenceManager;
 import android.preference.SwitchPreference;
 import android.view.MenuItem;
 
-import net.digitalphantom.app.weatherapp.R;
-import net.digitalphantom.app.weatherapp.WeatherActivity;
+import net.firstweather.app.weatherapp.R;
+import net.firstweather.app.weatherapp.WeatherActivity;
 
 public class SettingsFragment extends PreferenceFragment implements Preference.OnPreferenceChangeListener, SharedPreferences.OnSharedPreferenceChangeListener {
 

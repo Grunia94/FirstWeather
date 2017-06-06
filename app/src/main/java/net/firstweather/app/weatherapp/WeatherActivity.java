@@ -22,7 +22,7 @@
  * THE SOFTWARE.
  *
  */
-package net.digitalphantom.app.weatherapp;
+package net.firstweather.app.weatherapp;
 
 import android.Manifest;
 import android.app.ProgressDialog;
@@ -47,16 +47,16 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import net.digitalphantom.app.weatherapp.data.Channel;
-import net.digitalphantom.app.weatherapp.data.Condition;
-import net.digitalphantom.app.weatherapp.data.LocationResult;
-import net.digitalphantom.app.weatherapp.data.Units;
-import net.digitalphantom.app.weatherapp.fragments.WeatherConditionFragment;
-import net.digitalphantom.app.weatherapp.listener.GeocodingServiceListener;
-import net.digitalphantom.app.weatherapp.listener.WeatherServiceListener;
-import net.digitalphantom.app.weatherapp.service.WeatherCacheService;
-import net.digitalphantom.app.weatherapp.service.GoogleMapsGeocodingService;
-import net.digitalphantom.app.weatherapp.service.YahooWeatherService;
+import net.firstweather.app.weatherapp.data.Channel;
+import net.firstweather.app.weatherapp.data.Condition;
+import net.firstweather.app.weatherapp.data.LocationResult;
+import net.firstweather.app.weatherapp.data.Units;
+import net.firstweather.app.weatherapp.fragments.WeatherConditionFragment;
+import net.firstweather.app.weatherapp.listener.GeocodingServiceListener;
+import net.firstweather.app.weatherapp.listener.WeatherServiceListener;
+import net.firstweather.app.weatherapp.service.WeatherCacheService;
+import net.firstweather.app.weatherapp.service.GoogleMapsGeocodingService;
+import net.firstweather.app.weatherapp.service.YahooWeatherService;
 
 public class WeatherActivity extends AppCompatActivity implements WeatherServiceListener, GeocodingServiceListener, LocationListener {
 

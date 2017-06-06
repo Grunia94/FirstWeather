@@ -117,7 +117,7 @@ THE SOFTWARE.
 
         <fragment
             android:id="@+id/forecast_0"
-            android:name="net.digitalphantom.app.weatherapp.fragments.WeatherConditionFragment"
+            android:name="net.firstweather.app.weatherapp.fragments.WeatherConditionFragment"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -127,7 +127,7 @@ THE SOFTWARE.
 
         <fragment
             android:id="@+id/forecast_1"
-            android:name="net.digitalphantom.app.weatherapp.fragments.WeatherConditionFragment"
+            android:name="net.firstweather.app.weatherapp.fragments.WeatherConditionFragment"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -137,7 +137,7 @@ THE SOFTWARE.
 
         <fragment
             android:id="@+id/forecast_2"
-            android:name="net.digitalphantom.app.weatherapp.fragments.WeatherConditionFragment"
+            android:name="net.firstweather.app.weatherapp.fragments.WeatherConditionFragment"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -147,7 +147,7 @@ THE SOFTWARE.
 
         <fragment
             android:id="@+id/forecast_3"
-            android:name="net.digitalphantom.app.weatherapp.fragments.WeatherConditionFragment"
+            android:name="net.firstweather.app.weatherapp.fragments.WeatherConditionFragment"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -157,7 +157,7 @@ THE SOFTWARE.
 
         <fragment
             android:id="@+id/forecast_4"
-            android:name="net.digitalphantom.app.weatherapp.fragments.WeatherConditionFragment"
+            android:name="net.firstweather.app.weatherapp.fragments.WeatherConditionFragment"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
