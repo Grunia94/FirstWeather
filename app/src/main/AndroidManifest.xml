@@ -33,7 +33,7 @@
             android:parentActivityName=".HomeActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.firstweather.firstweather.HomeActivity" />
+                android:value="net.firstweather.app.weatherapp.HomeActivity" />
         </activity>
 
         <activity android:name=".Week"
@@ -41,7 +41,7 @@
             android:parentActivityName=".HomeActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.firstweather.firstweather.HomeActivity" />
+                android:value="net.firstweather.app.weatherapp.HomeActivity" />
         </activity>
 
 
