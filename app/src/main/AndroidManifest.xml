@@ -11,7 +11,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
-            android:name="net.firstweather.app.weatherapp.WeatherActivity"
+            android:name="net.firstweather.app.weatherapp.HomeActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,11 +22,30 @@
         <activity
             android:name="net.firstweather.app.weatherapp.SettingsActivity"
             android:label="@string/settings"
-            android:parentActivityName="net.firstweather.app.weatherapp.WeatherActivity">
+            android:parentActivityName="net.firstweather.app.weatherapp.HomeActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="net.firstweather.app.weatherapp.WeatherActivity" />
+                android:value="net.firstweather.app.weatherapp.HomeActivity" />
         </activity>
+
+        <activity android:name=".TomorrowActivity"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.firstweather.firstweather.HomeActivity" />
+        </activity>
+
+        <activity android:name=".Week"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.firstweather.firstweather.HomeActivity" />
+        </activity>
+
+
+
     </application>
 
 </manifest>

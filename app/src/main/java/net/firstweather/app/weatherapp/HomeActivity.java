@@ -59,7 +59,7 @@ import net.firstweather.app.weatherapp.service.WeatherCacheService;
 import net.firstweather.app.weatherapp.service.GoogleMapsGeocodingService;
 import net.firstweather.app.weatherapp.service.YahooWeatherService;
 
-public class WeatherActivity extends AppCompatActivity implements WeatherServiceListener, GeocodingServiceListener, LocationListener {
+public class HomeActivity extends AppCompatActivity implements WeatherServiceListener, GeocodingServiceListener, LocationListener {
 
     public static int GET_WEATHER_FROM_CURRENT_LOCATION = 0x00001;
 
@@ -156,7 +156,7 @@ public class WeatherActivity extends AppCompatActivity implements WeatherService
     }
 
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-        if (requestCode == WeatherActivity.GET_WEATHER_FROM_CURRENT_LOCATION) {
+        if (requestCode == HomeActivity.GET_WEATHER_FROM_CURRENT_LOCATION) {
             if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 getWeatherFromCurrentLocation();
             } else {
@@ -290,8 +290,6 @@ public class WeatherActivity extends AppCompatActivity implements WeatherService
     }
 
     public void buttonOnClick(View view) {
-
-        /*
         Intent intent;
 
         switch (view.getId()) {
@@ -306,18 +304,8 @@ public class WeatherActivity extends AppCompatActivity implements WeatherService
                 startActivity(intent);
                 break;
 
-            case R.id.options:
-                intent = new Intent(HomeActivity.this, Option.class);
-                startActivity(intent);
-                break;
-
-            case R.id.city:
-                intent = new Intent(HomeActivity.this, City.class );
-                startActivity(intent);
-                break;
-
         }
-        */
+
     }
 
 

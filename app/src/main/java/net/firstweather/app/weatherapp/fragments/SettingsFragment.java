@@ -36,7 +36,7 @@ import android.preference.SwitchPreference;
 import android.view.MenuItem;
 
 import net.firstweather.app.weatherapp.R;
-import net.firstweather.app.weatherapp.WeatherActivity;
+import net.firstweather.app.weatherapp.HomeActivity;
 
 public class SettingsFragment extends PreferenceFragment implements Preference.OnPreferenceChangeListener, SharedPreferences.OnSharedPreferenceChangeListener {
 
@@ -75,7 +75,7 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == android.R.id.home) {
-            startActivity(new Intent(getActivity(), WeatherActivity.class));
+            startActivity(new Intent(getActivity(), HomeActivity.class));
             return true;
         }
         return super.onOptionsItemSelected(item);
