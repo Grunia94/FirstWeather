@@ -43,6 +43,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -81,7 +82,7 @@ public class WeatherActivity extends AppCompatActivity implements WeatherService
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_weather);
+        setContentView(R.layout.homescreen);
 
         weatherIconImageView = (ImageView) findViewById(R.id.weatherIconImageView);
         temperatureTextView = (TextView) findViewById(R.id.temperatureTextView);
@@ -287,4 +288,37 @@ public class WeatherActivity extends AppCompatActivity implements WeatherService
     public void onProviderDisabled(String s) {
         // OPTIONAL: implement your custom logic here
     }
+
+    public void buttonOnClick(View view) {
+
+        /*
+        Intent intent;
+
+        switch (view.getId()) {
+
+            case R.id.tomorrow:
+                intent = new Intent(HomeActivity.this, TomorrowActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.week:
+                intent = new Intent(HomeActivity.this, Week.class);
+                startActivity(intent);
+                break;
+
+            case R.id.options:
+                intent = new Intent(HomeActivity.this, Option.class);
+                startActivity(intent);
+                break;
+
+            case R.id.city:
+                intent = new Intent(HomeActivity.this, City.class );
+                startActivity(intent);
+                break;
+
+        }
+        */
+    }
+
+
 }
