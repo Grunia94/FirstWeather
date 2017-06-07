@@ -196,7 +196,7 @@ public class HomeActivity extends AppCompatActivity implements WeatherServiceLis
 
         weatherIconImageView.setImageResource(weatherIconImageResource);
         temperatureTextView.setText(getString(R.string.temperature_output, condition.getTemperature(), units.getTemperature()));
-        conditionTextView.setText(condition.getDescription());
+        conditionTextView.setText(SpolszczenieWarunkowAtmosferycznych(condition.getDescription()));
         locationTextView.setText(channel.getLocation());
         dataTextView.setText(condition.getDate());
 
@@ -261,5 +261,27 @@ public class HomeActivity extends AppCompatActivity implements WeatherServiceLis
         startActivity(intent);
     }
 
+
+    public String SpolszczenieWarunkowAtmosferycznych(String angielskaNazwa){
+        String polskaNazwa = new String();
+        switch (angielskaNazwa){
+            case("Thunderstorms"):
+                polskaNazwa = "burza";
+                break;
+        }
+
+        return polskaNazwa;
+    }
+
+    public String SpolszczenieDniTygodnia(String angielskaNazwa){
+        String polskaNazwa = new String();
+        switch (angielskaNazwa){
+            case("Wed"):
+                polskaNazwa = "Śr";
+                break;
+        }
+
+        return polskaNazwa;
+    }
 
 }
