@@ -200,6 +200,7 @@ public class HomeActivity extends AppCompatActivity implements WeatherServiceLis
         locationTextView.setText(channel.getLocation());
         dataTextView.setText(condition.getDate());
 
+
         cacheService.save(channel);
     }
 
@@ -263,178 +264,170 @@ public class HomeActivity extends AppCompatActivity implements WeatherServiceLis
 
 
     public String SpolszczenieWarunkowAtmosferycznych(String angielskaNazwa){
-        String polskaNazwa = new String();
+
         switch (angielskaNazwa){
-            case("tornado"):
-                polskaNazwa = "Tornado";
-                break;
-            case("tropical storm"):
-                polskaNazwa = "Burza tropikalna";
-                break;
-            case("hurricane"):
-                polskaNazwa = "Huragan";
-                break;
-            case("severe thunderstorms"):
-                polskaNazwa = "Gwałtowne burze";
-                break;
-            case("thunderstorms"):
-                polskaNazwa = "Burze";
-                break;
-            case("mixed rain and snow"):
-                polskaNazwa = "Deszcz ze śniegiem";
-                break;
-            case("mixed rain and sleet"):
-                polskaNazwa = "Deszcz ze śniegiem";
-                break;
-            case("mixed snow and sleet"):
-                polskaNazwa = "Deszcz ze śniegiem";
-                break;
-            case("freezing drizzle"):
-                polskaNazwa = "Marznąca mżawka";
-                break;
-            case("drizzle"):
-                polskaNazwa = "Mżawka";
-                break;
-            case("freezing rain"):
-                polskaNazwa = "Marznący deszcz";
-                break;
-            case("showers"):
-                polskaNazwa = "Przelotny deszcz";
-                break;
-            case("snow flurries"):
-                polskaNazwa = "Śnieżyca";
-                break;
-            case("light snow showers"):
-                polskaNazwa = "Przelotne opady śniegu";
-                break;
-            case("blowing snow"):
-                polskaNazwa = "Śnieg z wiatrem";
-                break;
-            case("snow"):
-                polskaNazwa = "Śnieg";
-                break;
-            case("hail"):
-                polskaNazwa = "Grad";
-                break;
-            case("sleet"):
-                polskaNazwa = "Śnieg z deszczem";
-                break;
-            case("dust"):
-                polskaNazwa = "Zawierucha";
-                break;
-            case("foggy"):
-                polskaNazwa = "Mgła";
-                break;
-            case("haze"):
-                polskaNazwa = "Mgła";
-                break;
-            case("smoky"):
-                polskaNazwa = "Mgliście";
-                break;
-            case("blustery"):
-                polskaNazwa = "Wietrznie";
-                break;
-            case("windy"):
-                polskaNazwa = "Wietrznie";
-                break;
+            case("Tornado"):
+                return "Tornado";
+
+            case("Tropical Storm"):
+                return "Burza tropikalna";
+
+            case("Hurricane"):
+                return "Huragan";
+
+            case("Severe Thunderstorms"):
+                return "Gwałtowne burze";
+
+            case("Thunderstorms"):
+                return "Burze";
+
+            case("Mixed Rain And Snow"):
+                return "Deszcz ze śniegiem";
+
+            case("Mixed Rain And Sleet"):
+                return "Deszcz ze śniegiem";
+
+            case("Mixed Snow And Sleet"):
+                return "Deszcz ze śniegiem";
+
+            case("Freezing Drizzle"):
+                return "Marznąca mżawka";
+
+            case("Drizzle"):
+                return "Mżawka";
+
+            case("Freezing Rain"):
+                return "Marznący deszcz";
+
+            case("Showers"):
+                return "Przelotny deszcz";
+
+            case("Snow Flurries"):
+                return "Śnieżyca";
+
+            case("Light Snow Showers"):
+                return "Przelotne opady śniegu";
+
+            case("Blowing Snow"):
+                return "Śnieg z wiatrem";
+
+            case("Snow"):
+                return "Śnieg";
+
+            case("Rain"):
+                return "Deszcz";
+
+            case("Hail"):
+                return "Grad";
+
+            case("Sleet"):
+                return "Śnieg z deszczem";
+
+            case("Dust"):
+                return "Zawierucha";
+
+            case("Foggy"):
+                return "Mgła";
+
+            case("Haze"):
+                return "Mgła";
+
+            case("Smoky"):
+                return "Mgliście";
+
+            case("Blustery"):
+                return "Wietrznie";
+
+            case("Windy"):
+                return "Wietrznie";
+
             case("Cold"):
-                polskaNazwa = "Zimno";
-                break;
+                return "Zimno";
+
             case("Cloudy"):
-                polskaNazwa = "Pochmurnie";
-                break;
-            case("mostly cloudy (night)"):
-                polskaNazwa = "Pochmurnie nocą";
-                break;
-            case("mostly cloudy (day)"):
-                polskaNazwa = "Pochmurnie w dzień";
-                break;
-            case("partly cloudy (night)"):
-                polskaNazwa = "Częściowe zachmurzenie";
-                break;
-            case("partly cloudy (day)"):
-                polskaNazwa = "Częściowe zachmurzenie";
-                break;
-            case("clear (night)"):
-                polskaNazwa = "Bezchmurna noc";
-                break;
-            case("sunny"):
-                polskaNazwa = "Słonecznie";
-                break;
-            case("fair (night)"):
-                polskaNazwa = "Bezchmurna noc";
-                break;
-            case("fair (day)"):
-                polskaNazwa = "Bezchmurny dzień";
-                break;
-            case("mixed rain and hail"):
-                polskaNazwa = "";
-                break;
-            case("Deszcz z gradem"):
-                polskaNazwa = "";
-                break;
-            case("hot"):
-                polskaNazwa = "Gorąco";
-                break;
-            case("isolated thunderstorms"):
-                polskaNazwa = "Możliwe burze";
-                break;
-            case("scattered thunderstorms"):
-                polskaNazwa = "Przelotne burze";
-                break;
-            case("scattered showers"):
-                polskaNazwa = "Przelotne opady";
-                break;
-            case("scattered snow showers"):
-                polskaNazwa = "Przelotne opady śniegu";
-                break;
-            case("heavy snow"):
-                polskaNazwa = "Mocne opady śniegu";
-                break;
-            case("partly cloudy"):
-                polskaNazwa = "Częściowe zachmurzenie";
-                break;
-            case("thundershowers"):
-                polskaNazwa = "Wieczorne burze";
-                break;
-            case("snow showers"):
-                polskaNazwa = "Opady śniegu";
-                break;
-            case("isolated thundershowers"):
-                polskaNazwa = "Możliwe opady śniegu";
-                break;
-            case("not available"):
-                polskaNazwa = "Brak danych";
-                break;
+                return "Pochmurnie";
+
+            case("Mostly Cloudy"):
+                return "Pochmurnie";
+
+            case("Partly Cloudy"):
+                return "Częściowe zachmurzenie";
+
+            case("Clear"):
+                return "Bezchmurnie";
+
+            case("Sunny"):
+                return "Słonecznie";
+
+            case("Fair"):
+                return "Bezchmurnie";
+
+            case("Mixed Rain And Hail"):
+                return "Deszcz z gradem";
+
+            case("Hot"):
+                return "Gorąco";
+
+            case("Isolated Thunderstorms"):
+                return "Możliwe burze";
+
+            case("Scattered Thunderstorms"):
+                return "Przelotne burze";
+
+            case("Scattered Showers"):
+                return "Przelotne opady";
+
+            case("Scattered Snow Showers"):
+                return "Przelotne opady śniegu";
+
+            case("Heavy Snow"):
+                return "Mocne opady śniegu";
+
+            case("Thundershowers"):
+                return "Wieczorne burze";
+
+            case("Snow Showers"):
+                return "Opady śniegu";
+
+            case("Isolated Thundershowers"):
+                return "Możliwe opady śniegu";
+
+            case("Mostly Sunny"):
+                return "Słonecznie";
+
+
+            case("Not Available"):
+                return "Brak danych";
+
         }
-        return polskaNazwa;
+
+        return angielskaNazwa;
     }
 
     public String SpolszczenieDniTygodnia(String angielskaNazwa){
-        String polskaNazwa = new String();
         switch (angielskaNazwa){
             case("Mon"):
-                polskaNazwa = "Pon.";
-                break;
+                return "Pon.";
+
             case("Tue"):
-                polskaNazwa = "Wt.";
-                break;
+                return "Wt.";
+
             case("Wed"):
-                polskaNazwa = "Śr";
-                break;
+                return "Śr";
+
             case("Thu"):
-                polskaNazwa = "Czw.";
-                break;
+                return "Czw.";
+
             case("Fri"):
-                polskaNazwa = "Pt.";
-                break;
+                return "Pt.";
+
             case("Sat"):
-                polskaNazwa = "Sob.";
-                break;
+                return "Sob.";
+
             case("Sun"):
-                polskaNazwa = "Nd.";
-                break;
+                return "Nd.";
         }
-        return polskaNazwa;
+
+        return angielskaNazwa;
     }
 }
