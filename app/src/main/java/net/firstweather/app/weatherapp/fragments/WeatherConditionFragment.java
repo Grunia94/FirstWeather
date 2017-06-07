@@ -38,7 +38,7 @@ import net.firstweather.app.weatherapp.data.Units;
 
 public class WeatherConditionFragment extends Fragment {
     private ImageView weatherIconImageView;
-    private TextView dayLabelTextView;
+    private TextView dateLabelTextView;
     private TextView highTemperatureTextView;
     private TextView lowTemperatureTextView;
 
@@ -46,10 +46,10 @@ public class WeatherConditionFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_weather_condition, container, false);
+        View view = inflater.inflate(R.layout.fragment_week, container, false);
 
         weatherIconImageView = (ImageView) view.findViewById(R.id.weatherIconImageView);
-        dayLabelTextView = (TextView) view.findViewById(R.id.dayTextView);
+        dateLabelTextView = (TextView) view.findViewById(R.id.dateTextView);
         highTemperatureTextView = (TextView) view.findViewById(R.id.highTemperatureTextView);
         lowTemperatureTextView = (TextView) view.findViewById(R.id.lowTemperatureTextView);
 
@@ -60,7 +60,7 @@ public class WeatherConditionFragment extends Fragment {
         int weatherIconImageResource = getResources().getIdentifier("icon_" + forecast.getCode(), "drawable", getActivity().getPackageName());
 
         weatherIconImageView.setImageResource(weatherIconImageResource);
-        dayLabelTextView.setText(forecast.getDay());
+        dateLabelTextView.setText(forecast.getDay());
         highTemperatureTextView.setText(getString(R.string.temperature_output, forecast.getHighTemperature(), units.getTemperature()));
         lowTemperatureTextView.setText(getString(R.string.temperature_output, forecast.getLowTemperature(), units.getTemperature()));
 

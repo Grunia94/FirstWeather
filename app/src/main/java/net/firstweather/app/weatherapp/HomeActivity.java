@@ -257,21 +257,8 @@ public class HomeActivity extends AppCompatActivity implements WeatherServiceLis
 
     public void buttonOnClick(View view) {
         Intent intent;
-
-        switch (view.getId()) {
-
-            case R.id.tomorrow:
-                intent = new Intent(HomeActivity.this, TomorrowActivity.class);
-                startActivity(intent);
-                break;
-
-            case R.id.week:
-                intent = new Intent(HomeActivity.this, Week.class);
-                startActivity(intent);
-                break;
-
-        }
-
+        intent = new Intent(HomeActivity.this, Week.class);
+        startActivity(intent);
     }
 
 

@@ -190,7 +190,7 @@ public class Week extends AppCompatActivity implements WeatherServiceListener, G
         locationTextView.setText(channel.getLocation());
 
         for (int day = 0; day < forecast.length; day++) {
-            if (day >= 5) {
+            if (day >= 7) {
                 break;
             }
 
@@ -261,21 +261,8 @@ public class Week extends AppCompatActivity implements WeatherServiceListener, G
 
     public void buttonOnClick(View view) {
         Intent intent;
-
-        switch (view.getId()) {
-
-            case R.id.today:
-                intent = new Intent(Week.this, HomeActivity.class);
-                startActivity(intent);
-                break;
-
-            case R.id.tomorrow:
-                intent = new Intent(Week.this, TomorrowActivity.class);
-                startActivity(intent);
-                break;
-
-        }
-
+        intent = new Intent(Week.this, HomeActivity.class);
+        startActivity(intent);
     }
 
 

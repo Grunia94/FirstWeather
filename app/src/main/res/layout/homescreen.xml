@@ -48,7 +48,8 @@
                 android:background="@color/colorPrimary"
                 android:onClick="buttonOnClick"
                 android:text="Dziś"
-                android:textColor="#ffffff" />
+                android:textColor="#ffffff"
+                android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/imageView7"
@@ -65,23 +66,6 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/tomorrow"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/colorPrimary"
-                android:onClick="buttonOnClick"
-                android:text="Jutro"
-                android:textColor="#ffffff" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <Button
                 android:id="@+id/week"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -89,7 +73,8 @@
                 android:background="@color/colorPrimary"
                 android:onClick="buttonOnClick"
                 android:text="Tydzień"
-                android:textColor="#ffffff" />
+                android:textColor="#ffffff"
+                android:textStyle="bold" />
         </LinearLayout>
 
     </LinearLayout>
@@ -108,14 +93,14 @@
 
             <TextView
                 android:id="@+id/data"
-                android:gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:layout_marginLeft="3dp"
                 android:layout_weight="1"
                 android:ems="10"
-                android:text="Dzień"
+                android:gravity="center"
+                android:text="data"
                 android:textAlignment="center"
                 android:textColor="#ffffff"
                 android:textSize="20sp" />
@@ -159,8 +144,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:text="12'C"
                 android:gravity="center"
+                android:text="temperatura"
                 android:textAlignment="center"
                 android:textColor="#ffffff"
                 android:textSize="36sp"
@@ -197,15 +182,16 @@
                     android:text="Wilgotność"
                     android:textAlignment="center"
                     android:textColor="#ffffff"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/textView8"
+                    android:id="@+id/wilgotnosc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:gravity="center"
-                    android:text="20%"
+                    android:text="wilgotność"
                     android:textAlignment="center"
                     android:textColor="#ffffff"
                     android:textSize="20sp" />
@@ -227,15 +213,16 @@
                     android:text="Ciśnienie"
                     android:textAlignment="center"
                     android:textColor="#ffffff"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/textView9"
+                    android:id="@+id/cisnienie"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:text="1020 hPa"
                     android:gravity="center"
+                    android:text="ciśnienie"
                     android:textAlignment="center"
                     android:textColor="#ffffff"
                     android:textSize="20sp" />
@@ -263,7 +250,8 @@
                 android:text="Wiatr"
                 android:textAlignment="center"
                 android:textColor="#ffffff"
-                android:textSize="24dp" />
+                android:textSize="24dp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView11"
@@ -271,7 +259,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:gravity="center"
-                android:text="Południowo-zachodni"
+                android:text="kierunek"
                 android:textAlignment="center"
                 android:textColor="#ffffff"
                 android:textSize="18sp" />
@@ -281,8 +269,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:text="11 km/h"
                 android:gravity="center"
+                android:text="prędkość"
                 android:textAlignment="center"
                 android:textColor="#ffffff"
                 android:textSize="18sp" />
