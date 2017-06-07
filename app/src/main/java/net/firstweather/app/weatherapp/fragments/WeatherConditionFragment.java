@@ -41,7 +41,7 @@ public class WeatherConditionFragment extends Fragment {
     private TextView dateLabelTextView;
     private TextView highTemperatureTextView;
     private TextView lowTemperatureTextView;
-
+    private TextView forecastTextView;
     public WeatherConditionFragment() {}
 
     @Override
@@ -52,6 +52,7 @@ public class WeatherConditionFragment extends Fragment {
         dateLabelTextView = (TextView) view.findViewById(R.id.dateTextView);
         highTemperatureTextView = (TextView) view.findViewById(R.id.highTemperatureTextView);
         lowTemperatureTextView = (TextView) view.findViewById(R.id.lowTemperatureTextView);
+        forecastTextView = (TextView) view.findViewById(R.id.forecastTextView);
 
         return view;
     }
@@ -63,6 +64,7 @@ public class WeatherConditionFragment extends Fragment {
         dateLabelTextView.setText(forecast.getDay());
         highTemperatureTextView.setText(getString(R.string.temperature_output, forecast.getHighTemperature(), units.getTemperature()));
         lowTemperatureTextView.setText(getString(R.string.temperature_output, forecast.getLowTemperature(), units.getTemperature()));
+        forecastTextView.setText(forecast.getDescription());
 
 
     }

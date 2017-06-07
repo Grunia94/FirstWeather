@@ -33,7 +33,6 @@
                         android:id="@+id/weatherIconImageView"
                         android:layout_width="30dp"
                         android:layout_height="match_parent"
-                        android:background="@drawable/slonce"
                         android:gravity="center" />
                 </TableRow>
             </TableLayout>
