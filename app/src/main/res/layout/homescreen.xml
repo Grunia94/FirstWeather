@@ -145,11 +145,10 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:gravity="center"
-                android:text="temperatura"
+                android:text="Temperatura"
                 android:textAlignment="center"
                 android:textColor="#ffffff"
-                android:textSize="36sp"
-                android:textStyle="bold" />
+                android:textSize="36sp" />
         </LinearLayout>
 
         <ImageView
@@ -239,7 +238,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:layout_marginTop="5dp">
+                    android:layout_marginTop="5dp"
+            android:weightSum="1">
+
 
             <TextView
                 android:id="@+id/textView10"
@@ -253,27 +254,58 @@
                 android:textSize="24dp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/textView11"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:gravity="center"
-                android:text="kierunek"
-                android:textAlignment="center"
-                android:textColor="#ffffff"
-                android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/textView12"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_weight="0.00">
+
+
+
+                    <ImageView
+                        android:id="@+id/kierunekwiatru"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:adjustViewBounds="false"
+                        app:srcCompat="@drawable/zachodni"
+                        android:layout_weight="0.5"/>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="vertical"
+                    android:layout_weight="0.5">
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:text="Prędkość"
+                        android:textAlignment="center"
+                        android:textColor="#ffffff"
+                        android:textStyle="bold"
+                        android:textSize="24sp"
+                        android:layout_weight="0.7"/>
+            <TextView
+                android:id="@+id/predkosc"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
                 android:ems="10"
                 android:gravity="center"
                 android:text="prędkość"
                 android:textAlignment="center"
                 android:textColor="#ffffff"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:layout_weight="0.3"/>
+                </LinearLayout>
+                </LinearLayout>
+
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
