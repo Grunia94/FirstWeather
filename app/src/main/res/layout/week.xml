@@ -167,7 +167,7 @@
                             android:id="@+id/imageView16"
                             android:layout_width="30dp"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/termometr"
+                            android:background="@drawable/temp_max"
                             android:gravity="center" />
 
                         <TextView
@@ -195,7 +195,7 @@
                         <ImageView
                             android:layout_width="30dp"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/kropla"
+                            android:background="@drawable/temp_min"
                             android:gravity="center" />
 
                         <TextView
@@ -279,7 +279,7 @@
                             android:id="@+id/imageView22"
                             android:layout_width="30dp"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/termometr"
+                            android:background="@drawable/temp_max"
                             android:gravity="center" />
 
                         <TextView
@@ -307,7 +307,7 @@
                         <ImageView
                             android:layout_width="30dp"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/kropla"
+                            android:background="@drawable/temp_min"
                             android:gravity="center" />
 
                         <TextView
@@ -391,7 +391,7 @@
                             android:id="@+id/imageView28"
                             android:layout_width="30dp"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/termometr"
+                            android:background="@drawable/temp_max"
                             android:gravity="center" />
 
                         <TextView
@@ -419,7 +419,7 @@
                         <ImageView
                             android:layout_width="30dp"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/kropla"
+                            android:background="@drawable/temp_min"
                             android:gravity="center" />
 
                         <TextView
@@ -503,7 +503,7 @@
                             android:id="@+id/imageView34"
                             android:layout_width="30dp"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/termometr"
+                            android:background="@drawable/temp_max"
                             android:gravity="center" />
 
                         <TextView
@@ -531,7 +531,7 @@
                         <ImageView
                             android:layout_width="30dp"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/kropla"
+                            android:background="@drawable/temp_min"
                             android:gravity="center" />
 
                         <TextView
@@ -615,7 +615,7 @@
                             android:id="@+id/imageView40"
                             android:layout_width="30dp"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/termometr"
+                            android:background="@drawable/temp_max"
                             android:gravity="center" />
 
                         <TextView
@@ -643,7 +643,7 @@
                         <ImageView
                             android:layout_width="30dp"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/kropla"
+                            android:background="@drawable/temp_min"
                             android:gravity="center" />
 
                         <TextView
@@ -727,7 +727,7 @@
                             android:id="@+id/imageView46"
                             android:layout_width="30dp"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/termometr"
+                            android:background="@drawable/temp_max"
                             android:gravity="center" />
 
                         <TextView
@@ -755,7 +755,7 @@
                         <ImageView
                             android:layout_width="30dp"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/kropla"
+                            android:background="@drawable/temp_min"
                             android:gravity="center" />
 
                         <TextView
@@ -839,7 +839,7 @@
                             android:id="@+id/imageView2"
                             android:layout_width="30dp"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/termometr"
+                            android:background="@drawable/temp_max"
                             android:gravity="center" />
 
                         <TextView
@@ -867,7 +867,7 @@
                         <ImageView
                             android:layout_width="30dp"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/kropla"
+                            android:background="@drawable/temp_min"
                             android:gravity="center" />
 
                         <TextView
