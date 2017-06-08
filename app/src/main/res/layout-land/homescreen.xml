@@ -127,7 +127,7 @@
                 android:layout_weight="0.50"
                 android:ems="10"
                 android:gravity="center"
-                android:text="@string/condition"
+                android:text="prognoza"
                 android:textColor="#ffffff"
                 android:textSize="24sp" />
         </LinearLayout>
@@ -144,7 +144,7 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:gravity="center"
-                android:text="Temperatura"
+                android:text="temperatura"
                 android:textAlignment="center"
                 android:textColor="#ffffff"
                 android:textSize="36sp" />
@@ -189,7 +189,7 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:gravity="center"
-                    android:text="wilgotność"
+                    android:text="20%"
                     android:textAlignment="center"
                     android:textColor="#ffffff"
                     android:textSize="20sp" />
@@ -220,7 +220,7 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:gravity="center"
-                    android:text="ciśnienie"
+                    android:text="1020 hPa"
                     android:textAlignment="center"
                     android:textColor="#ffffff"
                     android:textSize="20sp" />
@@ -291,17 +291,18 @@
                         android:textStyle="bold"
                         android:textSize="24sp"
                         android:layout_weight="0.7"/>
-            <TextView
-                android:id="@+id/predkosc"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:ems="10"
-                android:gravity="center"
-                android:text="prędkość"
-                android:textAlignment="center"
-                android:textColor="#ffffff"
-                android:textSize="18sp"
-                android:layout_weight="0.3"/>
+
+                    <TextView
+                        android:id="@+id/predkosc"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.3"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:text="11 km/h"
+                        android:textAlignment="center"
+                        android:textColor="#ffffff"
+                        android:textSize="18sp" />
                 </LinearLayout>
                 </LinearLayout>
 

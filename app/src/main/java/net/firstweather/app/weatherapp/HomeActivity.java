@@ -196,7 +196,7 @@ public class HomeActivity extends AppCompatActivity implements WeatherServiceLis
 
         weatherIconImageView.setImageResource(weatherIconImageResource);
         temperatureTextView.setText(getString(R.string.temperature_output, condition.getTemperature(), units.getTemperature()));
-        conditionTextView.setText(condition.getDescription());
+        conditionTextView.setText(SpolszczenieWarunkowAtmosferycznych(condition.getDescription()));
         locationTextView.setText(channel.getLocation());
         dataTextView.setText(condition.getDate());
 
@@ -261,5 +261,171 @@ public class HomeActivity extends AppCompatActivity implements WeatherServiceLis
         startActivity(intent);
     }
 
+    public String SpolszczenieWarunkowAtmosferycznych(String angielskaNazwa){
+        switch (angielskaNazwa){
+            case("Tornado"):
+                return "Tornado";
+
+            case("Tropical Storm"):
+                return "Burza tropikalna";
+
+            case("Hurricane"):
+                return "Huragan";
+
+            case("Severe Thunderstorms"):
+                return "Gwałtowne burze";
+
+            case("Thunderstorms"):
+                return "Burze";
+
+            case("Mixed Rain And Snow"):
+                return "Deszcz ze śniegiem";
+
+            case("Mixed Rain And Sleet"):
+                return "Deszcz ze śniegiem";
+
+            case("Mixed Snow And Sleet"):
+                return "Deszcz ze śniegiem";
+
+            case("Freezing Drizzle"):
+                return "Marznąca mżawka";
+
+            case("Drizzle"):
+                return "Mżawka";
+
+            case("Freezing Rain"):
+                return "Marznący deszcz";
+
+            case("Showers"):
+                return "Przelotny deszcz";
+
+            case("Snow Flurries"):
+                return "Śnieżyca";
+
+            case("Light Snow Showers"):
+                return "Przelotne opady śniegu";
+
+            case("Blowing Snow"):
+                return "Śnieg z wiatrem";
+
+            case("Snow"):
+                return "Śnieg";
+
+            case("Rain"):
+                return "Deszcz";
+
+            case("Hail"):
+                return "Grad";
+
+            case("Sleet"):
+                return "Śnieg z deszczem";
+
+            case("Dust"):
+                return "Zawierucha";
+
+            case("Foggy"):
+                return "Mgła";
+
+            case("Haze"):
+                return "Mgła";
+
+            case("Smoky"):
+                return "Mgliście";
+
+            case("Blustery"):
+                return "Wietrznie";
+
+            case("Windy"):
+                return "Wietrznie";
+
+            case("Cold"):
+                return "Zimno";
+
+            case("Cloudy"):
+                return "Pochmurnie";
+
+            case("Mostly Cloudy"):
+                return "Pochmurnie";
+
+            case("Partly Cloudy"):
+                return "Częściowe zachmurzenie";
+
+            case("Clear"):
+                return "Bezchmurnie";
+
+            case("Sunny"):
+                return "Słonecznie";
+
+            case("Fair"):
+                return "Bezchmurnie";
+
+            case("Mixed Rain And Hail"):
+                return "Deszcz z gradem";
+
+            case("Hot"):
+                return "Gorąco";
+
+            case("Isolated Thunderstorms"):
+                return "Możliwe burze";
+
+            case("Scattered Thunderstorms"):
+                return "Przelotne burze";
+
+            case("Scattered Showers"):
+                return "Przelotne opady";
+
+            case("Scattered Snow Showers"):
+                return "Przelotne opady śniegu";
+
+            case("Heavy Snow"):
+                return "Mocne opady śniegu";
+
+            case("Thundershowers"):
+                return "Wieczorne burze";
+
+            case("Snow Showers"):
+                return "Opady śniegu";
+
+            case("Isolated Thundershowers"):
+                return "Możliwe opady śniegu";
+
+            case("Mostly Sunny"):
+                return "Słonecznie";
+
+
+            case("Not Available"):
+                return "Brak danych";
+
+        }
+
+        return angielskaNazwa;
+    }
+
+    public String SpolszczenieDniTygodnia(String angielskaNazwa){
+        switch (angielskaNazwa){
+            case("Mon"):
+                return "Pon.";
+
+            case("Tue"):
+                return "Wt.";
+
+            case("Wed"):
+                return "Śr";
+
+            case("Thu"):
+                return "Czw.";
+
+            case("Fri"):
+                return "Pt.";
+
+            case("Sat"):
+                return "Sob.";
+
+            case("Sun"):
+                return "Nd.";
+        }
+
+        return angielskaNazwa;
+    }
 
 }
