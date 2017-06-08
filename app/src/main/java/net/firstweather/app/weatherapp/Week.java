@@ -266,5 +266,4 @@ public class Week extends AppCompatActivity implements WeatherServiceListener, G
     }
 
 
-
 }

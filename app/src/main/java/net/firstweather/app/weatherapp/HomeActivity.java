@@ -200,7 +200,6 @@ public class HomeActivity extends AppCompatActivity implements WeatherServiceLis
         locationTextView.setText(channel.getLocation());
         dataTextView.setText(condition.getDate());
 
-
         cacheService.save(channel);
     }
 
@@ -262,9 +261,7 @@ public class HomeActivity extends AppCompatActivity implements WeatherServiceLis
         startActivity(intent);
     }
 
-
     public String SpolszczenieWarunkowAtmosferycznych(String angielskaNazwa){
-
         switch (angielskaNazwa){
             case("Tornado"):
                 return "Tornado";
@@ -430,4 +427,5 @@ public class HomeActivity extends AppCompatActivity implements WeatherServiceLis
 
         return angielskaNazwa;
     }
+
 }
