@@ -26,8 +26,8 @@
                         android:background="@color/colorPrimary"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="dzień"
-                        android:textColor="@android:color/background_light" />
+                        android:text="21.10.12"
+                        android:textColor="@android:color/background_light"/>
 
                     <ImageView
                         android:id="@+id/weatherIconImageView"
@@ -52,7 +52,7 @@
                         android:layout_weight="1"
                         android:background="@color/colorPrimary"
                         android:gravity="center"
-                        android:text="prognoza"
+                        android:text="Słonecznie"
                         android:textColor="@android:color/background_light" />
                 </TableRow>
             </TableLayout>
@@ -68,7 +68,7 @@
                         android:id="@+id/imageView16"
                         android:layout_width="30dp"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/temp_max"
+                        android:background="@drawable/termometr"
                         android:gravity="center" />
 
                     <TextView
@@ -79,7 +79,7 @@
                         android:layout_weight="1"
                         android:background="@color/colorPrimary"
                         android:gravity="center"
-                        android:text="tempMax"
+                        android:text="10'C"
                         android:textColor="@android:color/background_light" />
 
                 </TableRow>
@@ -96,7 +96,7 @@
                     <ImageView
                         android:layout_width="30dp"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/temp_min"
+                        android:background="@drawable/kropla"
                         android:gravity="center" />
 
                     <TextView
@@ -107,7 +107,7 @@
                         android:layout_weight="1"
                         android:background="@color/colorPrimary"
                         android:gravity="center"
-                        android:text="tempMin"
+                        android:text="10'C"
                         android:textColor="@android:color/background_light" />
 
                 </TableRow>
