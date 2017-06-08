@@ -265,176 +265,23 @@ public class HomeActivity extends AppCompatActivity implements WeatherServiceLis
     public String SpolszczenieWarunkowAtmosferycznych(String angielskaNazwa){
         String polskaNazwa = new String();
         switch (angielskaNazwa){
-            case("tornado"):
-                polskaNazwa = "Tornado";
-                break;
-            case("tropical storm"):
-                polskaNazwa = "Burza tropikalna";
-                break;
-            case("hurricane"):
-                polskaNazwa = "Huragan";
-                break;
-            case("severe thunderstorms"):
-                polskaNazwa = "Gwałtowne burze";
-                break;
-            case("thunderstorms"):
-                polskaNazwa = "Burze";
-                break;
-            case("mixed rain and snow"):
-                polskaNazwa = "Deszcz ze śniegiem";
-                break;
-            case("mixed rain and sleet"):
-                polskaNazwa = "Deszcz ze śniegiem";
-                break;
-            case("mixed snow and sleet"):
-                polskaNazwa = "Deszcz ze śniegiem";
-                break;
-            case("freezing drizzle"):
-                polskaNazwa = "Marznąca mżawka";
-                break;
-            case("drizzle"):
-                polskaNazwa = "Mżawka";
-                break;
-            case("freezing rain"):
-                polskaNazwa = "Marznący deszcz";
-                break;
-            case("showers"):
-                polskaNazwa = "Przelotny deszcz";
-                break;
-            case("snow flurries"):
-                polskaNazwa = "Śnieżyca";
-                break;
-            case("light snow showers"):
-                polskaNazwa = "Przelotne opady śniegu";
-                break;
-            case("blowing snow"):
-                polskaNazwa = "Śnieg z wiatrem";
-                break;
-            case("snow"):
-                polskaNazwa = "Śnieg";
-                break;
-            case("hail"):
-                polskaNazwa = "Grad";
-                break;
-            case("sleet"):
-                polskaNazwa = "Śnieg z deszczem";
-                break;
-            case("dust"):
-                polskaNazwa = "Zawierucha";
-                break;
-            case("foggy"):
-                polskaNazwa = "Mgła";
-                break;
-            case("haze"):
-                polskaNazwa = "Mgła";
-                break;
-            case("smoky"):
-                polskaNazwa = "Mgliście";
-                break;
-            case("blustery"):
-                polskaNazwa = "Wietrznie";
-                break;
-            case("windy"):
-                polskaNazwa = "Wietrznie";
-                break;
-            case("Cold"):
-                polskaNazwa = "Zimno";
-                break;
-            case("Cloudy"):
-                polskaNazwa = "Pochmurnie";
-                break;
-            case("mostly cloudy (night)"):
-                polskaNazwa = "Pochmurnie nocą";
-                break;
-            case("mostly cloudy (day)"):
-                polskaNazwa = "Pochmurnie w dzień";
-                break;
-            case("partly cloudy (night)"):
-                polskaNazwa = "Częściowe zachmurzenie";
-                break;
-            case("partly cloudy (day)"):
-                polskaNazwa = "Częściowe zachmurzenie";
-                break;
-            case("clear (night)"):
-                polskaNazwa = "Bezchmurna noc";
-                break;
-            case("sunny"):
-                polskaNazwa = "Słonecznie";
-                break;
-            case("fair (night)"):
-                polskaNazwa = "Bezchmurna noc";
-                break;
-            case("fair (day)"):
-                polskaNazwa = "Bezchmurny dzień";
-                break;
-            case("mixed rain and hail"):
-                polskaNazwa = "";
-                break;
-            case("Deszcz z gradem"):
-                polskaNazwa = "";
-                break;
-            case("hot"):
-                polskaNazwa = "Gorąco";
-                break;
-            case("isolated thunderstorms"):
-                polskaNazwa = "Możliwe burze";
-                break;
-            case("scattered thunderstorms"):
-                polskaNazwa = "Przelotne burze";
-                break;
-            case("scattered showers"):
-                polskaNazwa = "Przelotne opady";
-                break;
-            case("scattered snow showers"):
-                polskaNazwa = "Przelotne opady śniegu";
-                break;
-            case("heavy snow"):
-                polskaNazwa = "Mocne opady śniegu";
-                break;
-            case("partly cloudy"):
-                polskaNazwa = "Częściowe zachmurzenie";
-                break;
-            case("thundershowers"):
-                polskaNazwa = "Wieczorne burze";
-                break;
-            case("snow showers"):
-                polskaNazwa = "Opady śniegu";
-                break;
-            case("isolated thundershowers"):
-                polskaNazwa = "Możliwe opady śniegu";
-                break;
-            case("not available"):
-                polskaNazwa = "Brak danych";
+            case("Thunderstorms"):
+                polskaNazwa = "burza";
                 break;
         }
+
         return polskaNazwa;
     }
 
     public String SpolszczenieDniTygodnia(String angielskaNazwa){
         String polskaNazwa = new String();
         switch (angielskaNazwa){
-            case("Mon"):
-                polskaNazwa = "Pon.";
-                break;
-            case("Tue"):
-                polskaNazwa = "Wt.";
-                break;
             case("Wed"):
                 polskaNazwa = "Śr";
                 break;
-            case("Thu"):
-                polskaNazwa = "Czw.";
-                break;
-            case("Fri"):
-                polskaNazwa = "Pt.";
-                break;
-            case("Sat"):
-                polskaNazwa = "Sob.";
-                break;
-            case("Sun"):
-                polskaNazwa = "Nd.";
-                break;
         }
+
         return polskaNazwa;
     }
+
 }
