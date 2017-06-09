@@ -38,6 +38,8 @@ import net.firstweather.app.weatherapp.service.WeatherCacheService;
 import net.firstweather.app.weatherapp.service.GoogleMapsGeocodingService;
 import net.firstweather.app.weatherapp.service.YahooWeatherService;
 
+import java.util.Objects;
+
 public class HomeActivity extends AppCompatActivity implements WeatherServiceListener, GeocodingServiceListener, LocationListener {
 
     public static int GET_WEATHER_FROM_CURRENT_LOCATION = 0x00001;
@@ -198,7 +200,7 @@ public class HomeActivity extends AppCompatActivity implements WeatherServiceLis
         temperatureTextView.setText(getString(R.string.temperature_output, condition.getTemperature(), units.getTemperature()));
         conditionTextView.setText(SpolszczenieWarunkowAtmosferycznych(condition.getDescription()));
         locationTextView.setText(channel.getLocation());
-        dataTextView.setText(condition.getDate());
+        dataTextView.setText(ZmianaDaty(condition.getDate()));
 
         cacheService.save(channel);
     }
@@ -426,6 +428,17 @@ public class HomeActivity extends AppCompatActivity implements WeatherServiceLis
         }
 
         return angielskaNazwa;
+    }
+
+
+
+    public String ZmianaDaty(String angielskaNazwa) {
+        String tmp ="";
+        for (int i = 5; i < 16; i++ ) {
+          tmp += angielskaNazwa.charAt(i) ;
+        }
+
+        return tmp;
     }
 
 }
