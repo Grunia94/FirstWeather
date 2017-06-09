@@ -10,7 +10,7 @@
         android:layout_weight="1"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        tools:ignore="ObsoleteLayoutParam,UselessParent">
+        tools:ignore="ObsoleteLayoutParam">
 
         <TableRow
             android:layout_width="match_parent"
