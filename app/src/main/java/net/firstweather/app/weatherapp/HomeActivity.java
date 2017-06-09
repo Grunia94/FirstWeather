@@ -200,7 +200,7 @@ public class HomeActivity extends AppCompatActivity implements WeatherServiceLis
         temperatureTextView.setText(getString(R.string.temperature_output, condition.getTemperature(), units.getTemperature()));
         conditionTextView.setText(SpolszczenieWarunkowAtmosferycznych(condition.getDescription()));
         locationTextView.setText(channel.getLocation());
-        dataTextView.setText(ZmianaDaty(condition.getDate()));
+        dataTextView.setText(plMiesiac(ZmianaDaty(condition.getDate())));
 
         cacheService.save(channel);
     }
@@ -430,6 +430,24 @@ public class HomeActivity extends AppCompatActivity implements WeatherServiceLis
         return angielskaNazwa;
     }
 
+    public String plMiesiac(String dane) { //02 Jun 2017
+        String dzien = "";
+        String miesiac = "";
+        String rok = "";
+
+        for (int i = 0; i<dane.length(); i++) {
+            if(i<2) dzien += dane.charAt(i);
+            if(i>2 && i<6) miesiac += dane.charAt(i);
+            if(i>6 && i<dane.length()) rok += dane.charAt(i);
+        }
+
+        if (Objects.equals(miesiac, "Jun")){
+            miesiac = "Czerwiec";
+        }
+
+        return dzien + " " + miesiac + " " +rok;
+
+    }
 
 
     public String ZmianaDaty(String angielskaNazwa) {
