@@ -24,6 +24,8 @@
  */
 package net.firstweather.app.weatherapp.data;
 
+import net.firstweather.app.weatherapp.HomeActivity;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 

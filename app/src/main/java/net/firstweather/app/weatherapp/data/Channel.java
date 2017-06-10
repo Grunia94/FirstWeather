@@ -58,7 +58,7 @@ public class Channel implements JSONPopulator {
         String region = locationData.optString("region");
         String country = locationData.optString("country");
 
-        location = String.format("%s, %s", locationData.optString("city"), (region.length() != 0 ? region : country));
+        location = String.format("%s", locationData.optString("city"));
     }
 
     @Override

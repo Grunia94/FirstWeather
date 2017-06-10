@@ -187,7 +187,7 @@ public class Week extends AppCompatActivity implements WeatherServiceListener, G
 
         int weatherIconImageResource = getResources().getIdentifier("icon_" + condition.getCode(), "drawable", getPackageName());
 
-        locationTextView.setText(channel.getLocation());
+        locationTextView.setText(SpolszczenieMiast(channel.getLocation()));
 
         for (int day = 0; day < forecast.length; day++) {
             if (day >= 7) {
@@ -265,5 +265,36 @@ public class Week extends AppCompatActivity implements WeatherServiceListener, G
         startActivity(intent);
     }
 
+    public String SpolszczenieMiast(String angielskaNazwa) {
+        switch (angielskaNazwa) {
+            case ("Warsaw"):
+                return "Warszawa";
+
+            case ("Krakow"):
+                return "Kraków";
+
+            case ("Wroclaw"):
+                return "Wrocław";
+
+            case ("Lodz"):
+                return "Łódź";
+
+            case ("Poznan"):
+                return "Poznań";
+
+            case ("Gdansk"):
+                return "Gdańsk";
+
+            case ("Bialystok"):
+                return "Białystok";
+
+            case ("Torun"):
+                return "Toruń";
+
+            case ("Ciemna Dabrowa"):
+                return "Ciemna Dąbrowa";
+        }
+        return angielskaNazwa;
+    }
 
 }

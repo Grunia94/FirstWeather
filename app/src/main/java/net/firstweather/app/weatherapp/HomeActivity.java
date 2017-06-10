@@ -199,7 +199,7 @@ public class HomeActivity extends AppCompatActivity implements WeatherServiceLis
         weatherIconImageView.setImageResource(weatherIconImageResource);
         temperatureTextView.setText(getString(R.string.temperature_output, condition.getTemperature(), units.getTemperature()));
         conditionTextView.setText(SpolszczenieWarunkowAtmosferycznych(condition.getDescription()));
-        locationTextView.setText(channel.getLocation());
+        locationTextView.setText(SpolszczenieMiast(channel.getLocation()));
         dataTextView.setText(plMiesiac(ZmianaDaty(condition.getDate())));
 
         cacheService.save(channel);
@@ -458,5 +458,39 @@ public class HomeActivity extends AppCompatActivity implements WeatherServiceLis
 
         return tmp;
     }
+
+    public String SpolszczenieMiast(String angielskaNazwa) {
+        switch (angielskaNazwa) {
+            case ("Warsaw"):
+                return "Warszawa";
+
+            case ("Krakow"):
+                return "Kraków";
+
+            case ("Wroclaw"):
+                return "Wrocław";
+
+            case ("Lodz"):
+                return "Łódź";
+
+            case ("Poznan"):
+                return "Poznań";
+
+            case ("Gdansk"):
+                return "Gdańsk";
+
+            case ("Bialystok"):
+                return "Białystok";
+
+            case ("Torun"):
+                return "Toruń";
+
+            case ("Ciemna Dabrowa"):
+                return "Ciemna Dąbrowa";
+        }
+        return angielskaNazwa;
+    }
+
+
 
 }
