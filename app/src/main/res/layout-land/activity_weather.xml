@@ -43,7 +43,8 @@
                     android:textAlignment="center"
                     android:gravity="bottom|center_horizontal"
                     android:layout_weight="1"
-                    android:typeface="serif" />
+                    android:typeface="serif"
+                    android:textColor="#fff" />
 
                 <TextView
                     android:id="@+id/conditionTextView"
@@ -52,7 +53,8 @@
                     android:text="@string/condition"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:textAlignment="center"
-                    android:gravity="center_horizontal" />
+                    android:gravity="center_horizontal"
+                    android:textColor="#fff" />
 
                 <TextView
                     android:id="@+id/locationTextView"
@@ -63,7 +65,8 @@
                     android:textStyle="bold"
                     android:layout_weight="1"
                     android:textAlignment="center"
-                    android:gravity="top|center_horizontal" />
+                    android:gravity="top|center_horizontal"
+                    android:textColor="#fff" />
             </LinearLayout>
 
         </LinearLayout>

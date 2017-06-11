@@ -23,7 +23,8 @@
         android:layout_below="@+id/weatherIconImageView"
         android:layout_centerHorizontal="true"
         android:textStyle="bold"
-        android:typeface="serif" />
+        android:typeface="serif"
+        android:textColor="#fff"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -32,7 +33,8 @@
         android:text="@string/condition"
         android:id="@+id/conditionTextView"
         android:layout_below="@+id/temperatureTextView"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="#fff" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -42,7 +44,8 @@
         android:id="@+id/locationTextView"
         android:layout_below="@+id/conditionTextView"
         android:layout_centerHorizontal="true"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textColor="#fff" />
 
     <ImageView
         android:layout_width="wrap_content"
